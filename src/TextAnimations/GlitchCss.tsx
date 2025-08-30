@@ -1,8 +1,8 @@
 'use client';
 
-export default function GlitchText({ children }: { children: string }) {
+export default function GlitchText({ children, className }: { children: string, className?: string }) {
     return (
-      <span className="glitch" aria-label={children} data-text={children}>
+      <span className={`glitch ${className}`} aria-label={children} data-text={children}>
         {children}
         <style jsx>{`
           .glitch {

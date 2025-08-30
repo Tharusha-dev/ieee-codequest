@@ -1,7 +1,24 @@
+import ScrambledText from '@/TextAnimations/ScrambledText/ScrambledText';
+  
+
+
 const Introduction = () => {
   return (
     <section className="text-center max-w-4xl">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">Step into the ultimate Capture the Flag (CTF) challenge, where cybersecurity meets strategy, skill, and innovation.</h2>
+      {/* <h2 className="text-3xl md:text-4xl font-bold mb-4">Step into the ultimate Capture the Flag (CTF) challenge, where cybersecurity meets strategy, skill, and innovation.</h2> */}
+{/*       
+      <ScrambledText
+      className="text-3xl md:text-4xl font-bold mb-4"
+      
+      radius={100}
+      duration={1.2}
+      speed={0.5}
+      scrambleChars={".:!"}
+      
+      >Step into the ultimate Capture the Flag (CTF) challenge, where cybersecurity meets strategy, skill, and innovation.
+      </ScrambledText> */}
+
+      
       <div className="grid md:grid-cols-3 gap-4 text-left">
         <div className="bg-pink-500/20 p-4 rounded-lg">
           <h3 className="text-xl font-bold mb-2">Decrypt intricate puzzles.</h3>
