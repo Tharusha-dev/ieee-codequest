@@ -1,7 +1,8 @@
 "use client";
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import Link from 'next/link';
 
-const Introduction = () => {
+const Introduction = ({ id }: { id: string }) => {
   const [ref1, isIntersecting1] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
   const [ref2, isIntersecting2] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
   const [ref3, isIntersecting3] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
@@ -10,7 +11,7 @@ const Introduction = () => {
   const [ref6, isIntersecting6] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
 
   return (
-    <section className="text-center max-w-4xl">
+    <section id={id} className="text-center max-w-4xl">
       <div className="grid md:grid-cols-3 gap-8 text-center">
         <div
           ref={ref1}
@@ -64,6 +65,17 @@ const Introduction = () => {
             <h3 className="text-2xl font-bold mb-4">Claim prestigious prizes and connect with top professionals.</h3>
           </div>
         </div>
+      </div>
+      <div className="mt-16">
+    
+        <span className="cursor">_</span>
+        <a href="https://codequest.ucscieee.lk/CodeQuest.pdf" target="_blank" rel="noopener noreferrer"
+            className="inline-block bg-green-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-xl hover:bg-green-600 transition-colors duration-300 shadow-[0_0_15px_3px_rgba(0,255,0,0.2)]"
+            download
+          >
+            Download Booklet
+          
+        </a>
       </div>
     </section>
   );

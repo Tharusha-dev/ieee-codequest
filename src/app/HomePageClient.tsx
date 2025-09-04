@@ -49,7 +49,7 @@ export default function HomePageClient({ flag }: { flag: string }) {
   return (
     <>
       {isMouseInMain && <CursorFollower />}
-      <div className="top" style={{ position: 'relative', width: '100%', height: '100vh' }}>
+      <div id="hero" className="top" style={{ position: 'relative', width: '100%', height: '100vh', paddingTop: '100px' }}>
         <Image
           alt="Hacker themed header"
           src="/hacker-header.webp"
@@ -64,14 +64,14 @@ export default function HomePageClient({ flag }: { flag: string }) {
         </div>
       </div>
 
-      <main ref={mainRef} className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-        <Introduction />
-        <Timeline />
-        <Prizes />
-        <RegistrationSection togglePopup={togglePopup} />
+      <main ref={mainRef} className="flex flex-col items-center justify-center min-h-screen p-8 pt-20 pb-20 gap-16 sm:p-20">
+        <Introduction id="introduction" />
+        <Timeline id="timeline" />
+        <Prizes id="prizes" />
+        <RegistrationSection id="registration" togglePopup={togglePopup} />
         <Registration isOpen={isPopupOpen} togglePopup={togglePopup} flag={flag} />
-        <Faq />
-        <Footer />
+        <Faq id="faq" />
+        {/* <Footer /> */}
       </main>
     </>
   );

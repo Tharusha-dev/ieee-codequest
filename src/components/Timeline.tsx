@@ -1,7 +1,7 @@
 "use client";
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
-const Timeline = () => {
+const Timeline = ({ id }: { id: string }) => {
   const events = [
     { date: "11 APR", title: "Workshop 01", description: "Awareness Session", time: "00:00 IST" },
     { date: "20 APR", title: "Workshop 02", description: "Tools deep dive", time: "19:00 IST" },
@@ -11,7 +11,7 @@ const Timeline = () => {
   ];
 
   return (
-    <section className="w-full max-w-4xl">
+    <section id={id} className="w-full max-w-4xl">
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">Timeline</h2>
       <div className="relative">
         <div className="border-l-2 border-green-400 absolute h-full left-1/2 -translate-x-1/2"></div>

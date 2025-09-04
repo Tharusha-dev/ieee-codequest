@@ -1,7 +1,7 @@
 "use client";
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
-const Faq = () => {
+const Faq = ({ id }: { id: string }) => {
   const faqs = [
     {
       question: "What is CodeQuest: Vault Edition?",
@@ -26,7 +26,7 @@ const Faq = () => {
   ];
 
   return (
-    <section className="w-full max-w-4xl">
+    <section id={id} className="w-full max-w-4xl">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">FAQ</h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => {

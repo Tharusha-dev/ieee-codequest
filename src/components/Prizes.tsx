@@ -1,13 +1,13 @@
 "use client";
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
-const Prizes = () => {
+const Prizes = ({ id }: { id: string }) => {
   const [ref1, isIntersecting1] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
   const [ref2, isIntersecting2] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
   const [ref3, isIntersecting3] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.1 });
 
   return (
-    <section className="w-full max-w-4xl text-center">
+    <section id={id} className="w-full max-w-4xl text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-8">Prizes</h2>
       <div className="grid md:grid-cols-3 gap-8">
         <div

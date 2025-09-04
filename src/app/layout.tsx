@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { VT323 } from 'next/font/google';
 import "./globals.css";
+import Footer from "@/components/Footer";
+import TerminalNavbar from "@/components/TerminalNavbar";
 
 export const metadata: Metadata = {
   title: "CodeQuest: Vault Edition",
@@ -19,8 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={vt323.className}>
+      <body className={`${vt323.className} bg-gray-900`}>
+        <TerminalNavbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
