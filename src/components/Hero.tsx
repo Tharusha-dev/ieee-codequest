@@ -1,11 +1,11 @@
 import GlitchText from '@/TextAnimations/GlitchCss';
 
-const Hero = ({ togglePopup }) => {
+const Hero = ({ togglePopup }: { togglePopup: () => void }) => {
   return (
     <div
-      className="text-center h-[25vw] flex flex-col items-center justify-center fade-in"
+      className="text-center h-auto py-16 flex flex-col items-center justify-center fade-in"
     >
-      <GlitchText className="text-[4vw]">CodeQuest: Vault Edition</GlitchText>
+      <GlitchText className="text-4xl md:text-[4vw]">CodeQuest: Vault Edition</GlitchText>
       <p
         className="mt-4 text-lg md:text-xl fade-in-up"
         style={{ animationDelay: '0.5s' }}

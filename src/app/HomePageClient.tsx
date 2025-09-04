@@ -2,16 +2,19 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import Hero from '@/components/Hero';
 import Terminal from '@/components/Terminal';
-import Introduction from '@/components/Introduction';
-import Timeline from '@/components/Timeline';
-import Prizes from '@/components/Prizes';
-import Faq from '@/components/Faq';
-import Footer from '@/components/Footer';
-import Registration from '@/components/Registration';
-import RegistrationSection from '@/components/RegistrationSection';
 import CursorFollower from '@/components/CursorFollower';
+import Registration from '@/components/Registration';
+
+const Introduction = dynamic(() => import('@/components/Introduction'));
+const Timeline = dynamic(() => import('@/components/Timeline'));
+const Prizes = dynamic(() => import('@/components/Prizes'));
+const Faq = dynamic(() => import('@/components/Faq'));
+const Footer = dynamic(() => import('@/components/Footer'));
+const RegistrationSection = dynamic(() => import('@/components/RegistrationSection'));
 
 export default function HomePageClient({ flag }: { flag: string }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -46,9 +49,19 @@ export default function HomePageClient({ flag }: { flag: string }) {
   return (
     <>
       {isMouseInMain && <CursorFollower />}
-      <div className="top" style={{ backgroundImage: 'url(/hacker-header.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <Hero togglePopup={togglePopup} />
-        <Terminal />
+      <div className="top" style={{ position: 'relative', width: '100%', height: '100vh' }}>
+        <Image
+          alt="Hacker themed header"
+          src="/hacker-header.webp"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+        />
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <Hero togglePopup={togglePopup} />
+          <Terminal />
+        </div>
       </div>
 
       <main ref={mainRef} className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20">

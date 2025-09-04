@@ -16,6 +16,7 @@ const Introduction = () => {
           ref={ref1}
           className={`bg-gray-800/50 p-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_3px_rgba(0,255,0,0.2)] hover:scale-105 ${isIntersecting1 ? 'fade-in-up' : 'opacity-0'}`}
         >
+ 
           <h3 className="text-2xl font-bold mb-4">Decrypt intricate puzzles.</h3>
         </div>
         <div
@@ -23,6 +24,7 @@ const Introduction = () => {
           className={`bg-gray-800/50 p-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_3px_rgba(0,255,0,0.2)] hover:scale-105 ${isIntersecting2 ? 'fade-in-up' : 'opacity-0'}`}
           style={{ animationDelay: '0.2s' }}
         >
+
           <h3 className="text-2xl font-bold mb-4">Exploit security vulnerabilities.</h3>
         </div>
         <div
@@ -30,6 +32,7 @@ const Introduction = () => {
           className={`bg-gray-800/50 p-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_3px_rgba(0,255,0,0.2)] hover:scale-105 ${isIntersecting3 ? 'fade-in-up' : 'opacity-0'}`}
           style={{ animationDelay: '0.4s' }}
         >
+
           <h3 className="text-2xl font-bold mb-4">Master logic-based challenges inspired by real-world cyber threats.</h3>
         </div>
       </div>
@@ -41,6 +44,7 @@ const Introduction = () => {
             className={`bg-gray-800/50 p-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_3px_rgba(0,255,0,0.2)] hover:scale-105 ${isIntersecting4 ? 'fade-in-up' : 'opacity-0'}`}
             style={{ animationDelay: '0.6s' }}
           >
+
             <h3 className="text-2xl font-bold mb-4">Gain cutting-edge insights from industry experts through exclusive workshops.</h3>
           </div>
           <div
@@ -48,6 +52,7 @@ const Introduction = () => {
             className={`bg-gray-800/50 p-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_3px_rgba(0,255,0,0.2)] hover:scale-105 ${isIntersecting5 ? 'fade-in-up' : 'opacity-0'}`}
             style={{ animationDelay: '0.8s' }}
           >
+           
             <h3 className="text-2xl font-bold mb-4">Compete in thrilling online & on-site hackathon rounds.</h3>
           </div>
           <div
@@ -55,6 +60,7 @@ const Introduction = () => {
             className={`bg-gray-800/50 p-6 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_3px_rgba(0,255,0,0.2)] hover:scale-105 ${isIntersecting6 ? 'fade-in-up' : 'opacity-0'}`}
             style={{ animationDelay: '1s' }}
           >
+  
             <h3 className="text-2xl font-bold mb-4">Claim prestigious prizes and connect with top professionals.</h3>
           </div>
         </div>
