@@ -60,7 +60,7 @@ const Terminal = () => {
                 setTimeout(typeCommand, 1000); // Wait 2 seconds before typing next command
               }, 500);
             }
-          }, 100); // Typing speed
+          }, 50); // Typing speed
         }
       };
 
