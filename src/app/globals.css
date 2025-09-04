@@ -72,3 +72,25 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(4px);
   z-index: -1;
 }
+
+.Cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.Cursor span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #00ff00; /* Green */
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
