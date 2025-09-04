@@ -1,3 +1,6 @@
+"use client";
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+
 const Faq = () => {
   const faqs = [
     {
@@ -26,12 +29,20 @@ const Faq = () => {
     <section className="w-full max-w-4xl">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">FAQ</h2>
       <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <details key={index} className="bg-gray-800/50 p-4 rounded-lg cursor-pointer">
-            <summary className="font-bold text-lg">{faq.question}</summary>
-            <p className="mt-2 text-gray-300">{faq.answer}</p>
-          </details>
-        ))}
+        {faqs.map((faq, index) => {
+          const [ref, isIntersecting] = useIntersectionObserver<HTMLDetailsElement>({ threshold: 0.1 });
+          return (
+            <details
+              key={index}
+              ref={ref}
+              className={`bg-gray-800/50 p-4 rounded-lg cursor-pointer transition-all duration-500 ${isIntersecting ? 'fade-in-up' : 'opacity-0'}`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <summary className="font-bold text-xl hover:text-green-500 transition-colors">{faq.question}</summary>
+              <p className="mt-2 text-lg text-gray-300">{faq.answer}</p>
+            </details>
+          )
+        })}
       </div>
     </section>
   );

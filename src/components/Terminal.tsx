@@ -75,7 +75,7 @@ const Terminal = () => {
         <div className="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
         <div className="w-3 h-3 rounded-full bg-green-500"></div>
       </div>
-      <div className="mt-2">
+      <div className="mt-2 h-64 overflow-y-auto no-scrollbar">
         {lines.map((line, index) => (
           <div key={index} className="whitespace-pre-wrap">
             {line}
