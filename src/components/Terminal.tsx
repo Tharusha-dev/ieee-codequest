@@ -57,7 +57,7 @@ const Terminal = () => {
               setTimeout(() => {
                 setLines((prev) => [...prev, command.output]);
                 commandIndex++;
-                setTimeout(typeCommand, 2000); // Wait 2 seconds before typing next command
+                setTimeout(typeCommand, 1000); // Wait 2 seconds before typing next command
               }, 500);
             }
           }, 100); // Typing speed

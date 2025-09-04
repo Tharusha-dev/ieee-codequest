@@ -21,7 +21,7 @@ const Faq = () => {
     },
     {
       question: "How can I register?",
-      answer: "Registration details are typically announced on the official event website or social media channels. Stay tuned for updates!"
+      answer: "Click on the register button on the home page, and solve the CTF challenge."
     }
   ];
 
