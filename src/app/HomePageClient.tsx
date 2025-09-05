@@ -19,11 +19,23 @@ const RegistrationSection = dynamic(() => import('@/components/RegistrationSecti
 export default function HomePageClient({ flag }: { flag: string }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isMouseInMain, setIsMouseInMain] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const mainRef = useRef<HTMLElement | null>(null);
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const mainElement = mainRef.current;
@@ -48,7 +60,7 @@ export default function HomePageClient({ flag }: { flag: string }) {
 
   return (
     <>
-      {isMouseInMain && <CursorFollower />}
+      {isMouseInMain && !isMobile && <CursorFollower />}
       <div id="hero" className="top" style={{ position: 'relative', width: '100%', height: '100vh', paddingTop: '100px' }}>
         <Image
           alt="Hacker themed header"

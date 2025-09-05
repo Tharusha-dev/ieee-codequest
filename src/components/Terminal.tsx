@@ -69,7 +69,7 @@ const Terminal = () => {
   }, [isIntersecting]);
 
   return (
-    <div id="terminal" className="bg-black text-green-400 font-mono p-4 rounded-lg my-8 mx-auto w-11/12 md:w-3/4 lg:w-1/2 mt-8 md:mt-0">
+    <div id="terminal" className="bg-black text-green-400 font-mono p-5 rounded-lg my-8 mx-auto w-11/12 md:w-3/4 lg:w-1/2 mt-8 md:mt-0">
       <div className="flex items-center pb-2 border-b border-gray-700">
         <div className="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
         <div className="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>

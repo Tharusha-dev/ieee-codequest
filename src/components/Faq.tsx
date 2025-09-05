@@ -35,7 +35,7 @@ const Faq = ({ id }: { id: string }) => {
             <details
               key={index}
               ref={ref}
-              className={`bg-gray-800/50 p-4 rounded-lg cursor-pointer transition-all duration-500 ${isIntersecting ? 'fade-in-up' : 'opacity-0'}`}
+              className={`bg-gray-900 p-4 rounded-lg cursor-pointer transition-all duration-500 ${isIntersecting ? 'fade-in-up' : 'opacity-0'}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <summary className="font-bold text-xl hover:text-green-500 transition-colors">{faq.question}</summary>
