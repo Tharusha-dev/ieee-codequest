@@ -12,7 +12,7 @@
 
   
 
-## Frameworks Used
+## Frameworks & Technologies Used
 
 - Next.js
 
