@@ -35,10 +35,6 @@ const TerminalNavbar = () => {
         <Link href="#faq" className="nav-link" onClick={() => setIsOpen(false)}>
           ./FAQ
         </Link>
-        <span className="prompt">$&nbsp;</span>
-        <Link href="#registration" className="nav-link" onClick={() => setIsOpen(false)}>
-          ./Register
-        </Link>
       </div>
     </div>
   );

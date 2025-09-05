@@ -7,6 +7,9 @@ import TerminalNavbar from "@/components/TerminalNavbar";
 export const metadata: Metadata = {
   title: "CodeQuest: Vault Edition",
   description: "A Capture the Flag (CTF) hackathon aimed at enhancing cybersecurity skills among undergraduates.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 const vt323 = VT323({

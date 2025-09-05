@@ -68,14 +68,10 @@ const Introduction = ({ id }: { id: string }) => {
       </div>
       <div className="mt-16">
     
-        <span className="cursor">_</span>
         <a href="https://codequest.ucscieee.lk/CodeQuest.pdf" target="_blank" rel="noopener noreferrer"
             className="inline-block bg-green-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-xl hover:bg-green-600 transition-colors duration-300 shadow-[0_0_15px_3px_rgba(0,255,0,0.2)]"
             download
-          >
-            Download Booklet
-          
-        </a>
+          >Download Booklet</a>
       </div>
     </section>
   );
